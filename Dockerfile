@@ -7,3 +7,6 @@ RUN apt-get update && \
 
 ADD apt-source/ /root/apt-source/
 RUN cat /root/apt-source/sources.list > /etc/apt/sources.list
+
+ADD env/ /root/env/
+RUN cat /root/env/bashrc >> /home/gitlab_ci_runner/.bashrc
