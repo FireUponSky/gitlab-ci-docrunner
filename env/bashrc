@@ -1,0 +1,4 @@
+
+#Texlive
+export PATH="$PATH:/usr/local/texlive/bin/x86_64-linux"
+export TEXMFSYSCONFIG=~/.texmf-config
