@@ -16,3 +16,4 @@ ADD begin/ /app/begin
 RUN chmod -R 755 /app/begin
 
 ENTRYPOINT ["/app/begin/begin.sh"]
+CMD ["app:start"]
