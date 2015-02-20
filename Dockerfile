@@ -11,3 +11,8 @@ RUN cat /root/apt-source/sources.list > /etc/apt/sources.list
 ADD env/ /root/env/
 RUN cat /root/env/bashrc >> /home/gitlab_ci_runner/.bashrc && \
     cat /root/env/bashrc >> /home/gitlab_ci_runner/.profile
+
+ADD begin/ /app/begin
+RUN chmod -R 755 /app/begin
+
+ENTRYPOINT ["/app/begin/begin.sh"]
